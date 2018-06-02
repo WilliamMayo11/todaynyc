@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Weather from '../models/weather.js';
 
 class WeatherContainer extends Component {
@@ -6,30 +6,42 @@ class WeatherContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todayWeather: undefined,
+      currentTemp: undefined,
+      hiTemp: undefined,
+      lowTemp: undefined,
+      humidity: undefined,
+      wind: undefined,
+      description: undefined,
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const weather = new Weather()
     let clima = weather.getWeather();
     clima
       .then(r => r.json())
       .then(data => {
-        this.data = data;
-        console.log('whuuuuut ', data);
-
-        // set into state
-         // pass into variable
+        console.log(data)
+        this.setState({
+          currentTemp: data.main.temp,
+          hiTemp: data.main.temp_max,
+          lowTemp: data.main.temp_min,
+          humidity: data.main.humidity,
+          wind: data.wind.speed
+        })
       })
       .catch(err => console.log(err))
-    console.log('weatherApi: ', weather.weatherApi)
-    console.log('data: ', weather.data)
   }
 
   render() {
     return(
-      <p>temp does not exist</p>
+      <Fragment>
+        <p>Current Temperature: {this.state.currentTemp}</p>
+        <p>High: {this.state.hiTemp}</p>
+        <p>Low: {this.state.lowTemp}</p>
+        <p>Humidty: {this.state.humidity}</p>
+        <p>Wind Speed: {this.state.wind}</p>
+      </Fragment>
     )
   }
 
