@@ -17,8 +17,8 @@ class WeatherContainer extends Component {
 
   componentDidMount() {
     const weather = new Weather()
-    let clima = weather.getWeather();
-    clima
+    let todayWeather = weather.getWeather();
+    todayWeather
       .then(r => r.json())
       .then(data => {
         console.log(data)

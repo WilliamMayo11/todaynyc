@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import WeatherContainer from './components/weather-container.js';
+import LiveCam from './components/live-cam.js'
 import './App.css';
 
 class App extends Component {
-
-  componentWillMount() {
-    // fetch(`${API_URL}q=${'new york'}&units=imperial&APPID=${API_KEY}`)
-    //   .then(r => r.json())
-    //   .then(data => {
-    //     console.log('data: ', data)
-    //   })
-    //   .catch(err => console.log(err))
-  }
-
 
 
   render() {
@@ -23,9 +14,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">How about now?</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <LiveCam />
         <WeatherContainer />
       </div>
     );
