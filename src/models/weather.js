@@ -3,7 +3,7 @@ export class Weather {
 
   constructor() {
     this.API_URL = 'http://api.openweathermap.org/data/2.5/weather?';
-    this.API_KEY = // hidden
+    
 
   }
 
