@@ -6,6 +6,34 @@ import './App.css';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    // this.state = {
+    //   weather: {}
+    // }
+  }
+
+// componentDidMount() {
+//   fetch('/weather')
+//   .then(r => r.json())
+//   .then(data => {
+//     console.log('data: ', data)
+//     this.setState({
+//       weather: data
+//     })
+//   })
+//   .catch(err => {
+//     console.log('error fetching weather',err);
+//   })
+// }
+
+// renderWeather() {
+//   console.log(this.state.weather)
+//         // return (
+//         //   <h1>{this.state.weather.main.temp}</h1>
+//         // )
+// }
+
 
   render() {
     return (

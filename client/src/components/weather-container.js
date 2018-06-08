@@ -36,6 +36,7 @@ class WeatherContainer extends Component {
   render() {
     return(
       <Fragment>
+        <h1>Weather</h1>
         <p>Current Temperature: {this.state.currentTemp}</p>
         <p>High: {this.state.hiTemp}</p>
         <p>Low: {this.state.lowTemp}</p>
