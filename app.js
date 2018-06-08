@@ -12,6 +12,7 @@ var weatherRouter = require('./routes/weather');
 require('dotenv').config({ silent: true });
 
 var app = express();
+const PORT = process.env.PORT || 3001;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +24,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
+
+app.listen(PORT, () => console.log('Server is listening on port', PORT));
 
 
 app.use('/', indexRouter);
