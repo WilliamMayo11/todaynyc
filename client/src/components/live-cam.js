@@ -24,14 +24,14 @@ class LiveCam extends Component {
   switchVideo() {
     setInterval(() => {
       switch (this.state.currentVideo) {
-        case "https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0":
+        case "https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1":
         console.log('videoIndex: ', videoIndex)
           videoIndex++;
           this.setState({
             currentVideo: videoArr[videoIndex]
           })
           return;
-        case "https://www.youtube.com/embed/hck5LT3HtVE?autoplay=1&controls=0&showinfo=0mute=1?rel=0":
+        case "https://www.youtube.com/embed/hck5LT3HtVE?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1":
         console.log('videoIndex: ', videoIndex)
           videoIndex++;
           this.setState({
