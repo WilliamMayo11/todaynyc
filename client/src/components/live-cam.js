@@ -1,15 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import '../css/live-cam.css';
 
-<iframe src="https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-
-</iframe>
-
-
-
 let videoArr = [
-  "https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0",
-  "https://www.youtube.com/embed/hck5LT3HtVE?autoplay=1&controls=0&showinfo=0mute=1?rel=0",
+  "https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1",
+  "https://www.youtube.com/embed/hck5LT3HtVE?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1",
   "https://www.youtube.com/embed/xGAseSEdcyc?autoplay=1&controls=0&showinfo=0mute=1?rel=0"
 ]
 let videoIndex = 0;
