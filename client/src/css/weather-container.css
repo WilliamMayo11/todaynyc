@@ -1,0 +1,38 @@
+.weather-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 240px;
+  width: 240px;
+}
+.bold-temp {
+  position: absolute;
+  font-size: 80px;
+  margin-left: 20px;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+@media only screen and (max-width: 768px) {
+    .weather-icon {
+        height: 100px;
+        width: 100px;
+    }
+    .bold-temp {
+      font-size: 30px;
+      margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .weather-icon {
+        height: 60px;
+        width: 60px;
+    }
+    .bold-temp {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+}

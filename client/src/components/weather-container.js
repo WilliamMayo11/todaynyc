@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Weather from '../models/weather.js';
+import '../css/weather-container.css';
 
 class WeatherContainer extends Component {
 
@@ -12,6 +13,7 @@ class WeatherContainer extends Component {
       humidity: undefined,
       wind: undefined,
       description: undefined,
+      icon: undefined
     }
   }
 
@@ -23,11 +25,12 @@ class WeatherContainer extends Component {
       .then(data => {
         console.log(data)
         this.setState({
-          currentTemp: data.main.temp,
+          currentTemp: parseInt(data.main.temp) + `°F`,
           hiTemp: data.main.temp_max,
           lowTemp: data.main.temp_min,
           humidity: data.main.humidity,
-          wind: data.wind.speed
+          wind: data.wind.speed,
+          icon: weather.getIcon(data.weather[0].icon)
         })
       })
       .catch(err => console.log(err))
@@ -36,12 +39,10 @@ class WeatherContainer extends Component {
   render() {
     return(
       <Fragment>
-        <h1>Weather</h1>
-        <p>Current Temperature: {this.state.currentTemp}</p>
-        <p>High: {this.state.hiTemp}</p>
-        <p>Low: {this.state.lowTemp}</p>
-        <p>Humidty: {this.state.humidity}</p>
-        <p>Wind Speed: {this.state.wind}</p>
+        <div>
+          <img src={this.state.icon} className="weather-icon" alt="weather icon" />
+          <div><h1 className="bold-temp">{this.state.currentTemp}</h1></div>
+        </div>
       </Fragment>
     )
   }

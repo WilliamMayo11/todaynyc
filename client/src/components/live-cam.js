@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import '../css/live-cam.css';
 import { Carousel } from 'react-responsive-carousel';
+import swipeLeft from '../swipe-left.png';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 // let videoArr = [
@@ -10,57 +11,62 @@ import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 // ]
 // let videoIndex = 0;
 
+// CAROUSEL HTML
+// {/* <Fragment>
+//   <div onClick={this.pressed.bind(this)}>
+//     <Carousel
+//       showThumbs={false}
+//       swipeable={true}
+//       emulateTouch={true}
+//       showStatus={false}
+//       showIndicators={false}
+//     >
+//       <div className="intrinsic-container intrinsic-container-16x9">
+//         <iframe
+//           src="https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1"
+//           frameBorder="0"
+//           allow="autoplay; encrypted-media"
+//           modestbranding="0"
+//         >
+//         </iframe>
+//         <div className="swipebar"><img src={swipeLeft} className="swipe-img" /></div>
+//       </div>
+//       <div className="intrinsic-container intrinsic-container-16x9">
+//         <iframe
+//           src="https://www.youtube.com/embed/hck5LT3HtVE?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1&autoplay=1"
+//           frameBorder="0"
+//           allow="autoplay; encrypted-media"
+//           modestbranding="0"
+//         >
+//         </iframe>
+//       </div>
+//     </Carousel>
+//   </div>
+// </Fragment> */}
+
 class LiveCam extends Component {
 
   constructor(props) {
   super(props)
-  this.state = {
-    currentVideo: "https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1",
-    // display: {display: 'inline-block'},
-  }
+  this.state = {}
 }
 
-pressed() {
-  console.log('pressed')
-  // IF YOU CLICK THE LEFT SIDE OF THE CAROUSEL THIS WILL FIRE
-}
 
   render() {
     return(
       <Fragment>
-        <div onClick={this.pressed.bind(this)}>
-          <Carousel
-            showThumbs={false}
-            swipeable={true}
-            emulateTouch={true}
-            showStatus={false}
-            showIndicators={false}
+        <div className="intrinsic-container intrinsic-container-16x9">
+          <iframe
+            src="https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            modestbranding="0"
           >
-            <div className="intrinsic-container intrinsic-container-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1&autoplay=1"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                modestbranding="0"
-              >
-              </iframe>
-              <div className="transparent"></div>
-            </div>
-            <div className="intrinsic-container intrinsic-container-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/hck5LT3HtVE?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1&autoplay=1"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                modestbranding="0"
-              >
-              </iframe>
-            </div>
-          </Carousel>
+          </iframe>
         </div>
       </Fragment>
     )
   }
-
 
 }
 
