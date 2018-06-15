@@ -14,16 +14,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Today NYC</h1>
         </header>
+        <div className="weather-container">
+          <WeatherContainer />
+        </div>
+        <div className="live-cam">
+          <LiveCam />
+        </div>
         <div className="horoscope-container">
           <Horoscope />
-        </div>
-        <div>
-          <div className="weather-container">
-            <WeatherContainer />
-          </div>
-          <div className="live-cam">
-            <LiveCam />
-          </div>
         </div>
       </div>
     );
