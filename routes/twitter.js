@@ -4,8 +4,7 @@ const { getTweets } = require('../models/twitter-model');
 
 /* GET users listing. */
 router.get('/', getTweets, function(req, res, next) {
-  // console.log('****************twitter route res.data: :', res.json(res.data))
-  res.json(res.body || {});
+  res.json(res.data || {});
 });
 
 module.exports = router;

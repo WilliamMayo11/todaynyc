@@ -18,7 +18,7 @@ class TwitterContainer extends Component {
       .then(data => {
         console.log('twitter data: ', data)
         this.setState({
-          tweets: data.tweets
+          onetweet: data[0].text
         })
       })
       .catch(err => console.log(err))
@@ -29,7 +29,7 @@ class TwitterContainer extends Component {
   render() {
     return(
       <Fragment>
-        <h1>tweets</h1>
+        <h1>{this.state.onetweet}</h1>
       </Fragment>
     )
   }
