@@ -38,9 +38,9 @@ export class Weather {
       case '03n':
         return icon03n;
       case '04d':
-        return icon04d;
+        return icon04d; // SHOULD BE icon04d. THIS IS TEMPORARY
       case '04n':
-        return icon04n;
+        return icon04n; // SHOULD BE icon04n. THIS IS TEMPORARY
       case '09d':
         return icon09d;
       case '09n':

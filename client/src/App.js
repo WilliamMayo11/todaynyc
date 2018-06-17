@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './clock.png';
 import WeatherContainer from './components/weather-container.js';
-import Horoscope from './components/horoscope-container.js'
+// import Horoscope from './components/horoscope-container.js'
+import TwitterContainer from './components/twitter-container.js'
 import LiveCam from './components/live-cam.js'
 import './App.css';
 
@@ -20,8 +21,8 @@ class App extends Component {
         <div className="live-cam">
           <LiveCam />
         </div>
-        <div className="horoscope-container">
-          <Horoscope />
+        <div className="twitter-container">
+          <TwitterContainer />
         </div>
       </div>
     );

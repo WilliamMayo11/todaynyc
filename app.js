@@ -8,6 +8,7 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var weatherRouter = require('./routes/weather');
+var twitterRouter = require('./routes/twitter');
 
 require('dotenv').config({ silent: true });
 
@@ -31,6 +32,7 @@ app.listen(PORT, () => console.log('Server is listening on port', PORT));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/weather', weatherRouter);
+app.use('/tweets', twitterRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
