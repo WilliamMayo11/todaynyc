@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import Twitter from '../models/twitter.js';
+import TwitterList from './twitter-list.js'
 
 class TwitterContainer extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      tweets: undefined,
+      tweets: [],
     }
   }
 
@@ -22,21 +23,16 @@ class TwitterContainer extends Component {
         })
       })
       .catch(err => console.log(err))
-      this.renderTweets()
-  }
-
-  renderTweets() {
-    return this.state.tweets.map((tweet, i) => {
-      return <p>{tweet.text}</p>
-    })
+      // this.renderTweets()
   }
 
 
   render() {
     return(
       <Fragment>
-        <h1>tweets</h1>
-        {this.renderTweets()}
+        <TwitterList
+          tweets={this.state.tweets}
+        />
       </Fragment>
     )
   }

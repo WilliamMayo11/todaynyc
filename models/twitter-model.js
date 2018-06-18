@@ -27,8 +27,6 @@ function getTweets(req, res, next) {
 
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
-    // response => response.json()
-    console.log('response', response)
     res.data = response;
     next();
   });
