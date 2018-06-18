@@ -16,20 +16,27 @@ class TwitterContainer extends Component {
     todayTwitter
       .then(r => r.json())
       .then(data => {
-        console.log('twitter data: ', data)
+        console.log('twitter data: ', JSON.parse(data.body))
         this.setState({
-          onetweet: data[0].text
+          tweets: JSON.parse(data.body)
         })
       })
       .catch(err => console.log(err))
+      this.renderTweets()
   }
 
+  renderTweets() {
+    return this.state.tweets.map((tweet, i) => {
+      return <p>{tweet.text}</p>
+    })
+  }
 
 
   render() {
     return(
       <Fragment>
-        <h1>{this.state.onetweet}</h1>
+        <h1>tweets</h1>
+        {this.renderTweets()}
       </Fragment>
     )
   }
