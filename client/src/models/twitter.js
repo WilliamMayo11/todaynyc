@@ -1,7 +1,7 @@
 class Twitter {
 
   getTweets() {
-    return fetch(`/tweets`)
+    return fetch(`http://todaynyc.us-east-1.elasticbeanstalk.com/twitter`)
   }
 
 }
