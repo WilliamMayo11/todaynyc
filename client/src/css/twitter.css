@@ -1,16 +1,38 @@
 .card {
-  display: -webkit-inline-flex;
-  border: 2px solid black;
   height: 200px;
-  width: 240px;
+  width: 320px;
   background-color: white;
-  white-space: normal;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .card-container {
   overflow: auto;
   white-space: nowrap;
 }
 
+.card-outer {
+  display: -webkit-inline-flex;
+  white-space: normal;
+  height: 240px;
+  width: 400px;
+  background: linear-gradient(rgba(225, 225, 0, .7), rgba(225, 165, 0, .7));
+  margin: 10px;
+  border-radius: 20px;
+}
 p {
   padding: 5px;
+}
+
+@media only screen and (max-width: 620px) {
+  .card {
+    height: 320px;
+    width: 200px;
+  }
+  .card-outer {
+    height: 350px;
+    width: 220px;
+  }
 }

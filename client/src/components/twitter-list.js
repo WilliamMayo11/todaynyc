@@ -11,8 +11,10 @@ class TwitterList extends Component {
 
   renderTweets() {
     return this.props.tweets.map((tweet, i) => {
-      return <div className="card">
-        <p>{tweet.full_text}</p>
+      return <div className="card-outer">
+        <div className="card">
+          <p>{tweet.full_text}</p>
+        </div>
       </div>
     })
   }

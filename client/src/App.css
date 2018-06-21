@@ -13,9 +13,8 @@
   justify-content: flex-start;
   align-items: center;
   background-color: rgba(34, 34, 34, .5);
-  height: 25px;
+  height: 60px;
   width: 100vw;
-  padding: 20px;
   color: white;
   z-index: 20;
 }
@@ -41,7 +40,7 @@
 .twitter-container {
   position: relative;
   z-index: 20;
-  bottom: 220px;
+  bottom: 280px;
   height: 200px;
   width: 100vw;
 }
@@ -52,15 +51,9 @@
   }
 }
 
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 1110px) {
   .twitter-container {
     margin-top: 0;
     bottom: 0;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .twitter-container {
-    margin-top: 0;
   }
 }
