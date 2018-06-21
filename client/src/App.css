@@ -7,14 +7,17 @@
 }
 
 .App-header {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-color: #222;
+  background-color: rgba(34, 34, 34, .5);
   height: 25px;
+  width: 100vw;
   padding: 20px;
   color: white;
+  z-index: 20;
 }
 
 .App-title {
@@ -38,9 +41,15 @@
 .twitter-container {
   position: relative;
   z-index: 20;
-  bottom: 38vh;
+  bottom: 220px;
   height: 200px;
   width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .App-header {
+    position: relative;
+  }
 }
 
 @media only screen and (max-width: 910px) {
