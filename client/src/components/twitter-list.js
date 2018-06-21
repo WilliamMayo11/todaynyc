@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import '../css/twitter.css'
 
 class TwitterList extends Component {
 
@@ -10,18 +11,21 @@ class TwitterList extends Component {
 
   renderTweets() {
     return this.props.tweets.map((tweet, i) => {
-      return <p>{tweet.text}</p>
+      return <div className="card">
+        <p>{tweet.full_text}</p>
+      </div>
     })
   }
 
   render() {
     return(
       <Fragment>
-        {this.renderTweets()}
+        <div className="card-container">
+          {this.renderTweets()}
+        </div>
       </Fragment>
     )
   }
-
 }
 
 export default TwitterList;

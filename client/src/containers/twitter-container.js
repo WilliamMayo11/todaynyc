@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Twitter from '../models/twitter.js';
-import TwitterList from './twitter-list.js'
+import TwitterList from '../components/twitter-list.js'
 
 class TwitterContainer extends Component {
 
@@ -17,6 +17,7 @@ class TwitterContainer extends Component {
     todayTwitter
       .then(r => r.json())
       .then(data => {
+        console.log(data)
         this.setState({
           tweets: (data)
         })

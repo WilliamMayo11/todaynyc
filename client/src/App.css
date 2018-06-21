@@ -36,7 +36,22 @@
 }
 
 .twitter-container {
-  background-color: blue;
+  position: relative;
+  z-index: 20;
+  bottom: 38vh;
   height: 200px;
   width: 100vw;
+}
+
+@media only screen and (max-width: 910px) {
+  .twitter-container {
+    margin-top: 0;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .twitter-container {
+    margin-top: 0;
+  }
 }

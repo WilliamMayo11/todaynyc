@@ -1,0 +1,16 @@
+.card {
+  display: -webkit-inline-flex;
+  border: 2px solid black;
+  height: 200px;
+  width: 240px;
+  background-color: white;
+  white-space: normal;
+}
+.card-container {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+p {
+  padding: 5px;
+}

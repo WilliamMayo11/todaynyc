@@ -19,8 +19,8 @@ import icon50n from '../images/weather-icons/50n.png';
 
 export class Weather {
 
-  getWeather() {
-    return fetch('http://todaynyc.us-east-1.elasticbeanstalk.com/weather')
+  getCurrentWeather() {
+    return fetch('/weather') //http://todaynyc.us-east-1.elasticbeanstalk.com/weather
   }
 
   getIcon(icon) {

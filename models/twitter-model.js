@@ -12,7 +12,7 @@ let client = new Twitter({
 
 function getTweets(req, res, next) {
 
-  let params = {screen_name: 'nyctsubway', count: 150, exclude_replies: true};
+  let params = {screen_name: 'nyctsubway', count: 150, exclude_replies: true, tweet_mode: 'extended'};
 
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {

@@ -2,9 +2,13 @@ var express = require('express');
 var router = express.Router();
 // var fetch = require('node-fetch');
 
-const { getWeather } = require('../models/weather-model');
+const { getCurrentWeather, getWeatherForecast } = require('../models/weather-model');
 
-router.get('/', getWeather, function(req, res, next) {
+router.get('/', getCurrentWeather, function(req, res, next) {
+  res.json(res.data || {});
+});
+
+router.get('/forecast', getWeatherForecast, function(req, res, next) {
   res.json(res.data || {});
 });
 
