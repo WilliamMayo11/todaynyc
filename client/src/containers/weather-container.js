@@ -20,10 +20,11 @@ class WeatherContainer extends Component {
   componentDidMount() {
     const weather = new Weather()
     let todayWeather = weather.getCurrentWeather();
+    let weatherForecast = weather.getWeatherForecast();
     todayWeather
       .then(r => r.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         this.setState({
           currentTemp: parseInt(data.main.temp) + `°F`,
           hiTemp: data.main.temp_max,
@@ -32,6 +33,15 @@ class WeatherContainer extends Component {
           wind: data.wind.speed,
           icon: weather.getIcon(data.weather[0].icon)
         })
+      })
+      .catch(err => console.log(err))
+
+    weatherForecast
+      .then(r => r.json())
+      .then(data => {
+        console.log('forecast data: ', data)
+        let time = new Date(data.list[0].dt * 1000)
+        console.log('time: ', time)
       })
       .catch(err => console.log(err))
   }

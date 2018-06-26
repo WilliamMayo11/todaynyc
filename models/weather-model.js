@@ -22,6 +22,7 @@ function getWeatherForecast(req, res, next) {
   fetch(`${WEATHER_API_URL}forecast?id=${'5128638'}&units=imperial&APPID=${WEATHER_API_KEY}`)
   .then(r => r.json())
   .then(data => {
+    console.log(data)
     res.data = data;
     next();
   })

@@ -10,6 +10,8 @@
 }
 .card-container {
   overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   white-space: nowrap;
 }
 
@@ -18,7 +20,7 @@
   white-space: normal;
   height: 240px;
   width: 400px;
-  background: linear-gradient(rgba(225, 225, 0, .7), rgba(225, 165, 0, .7));
+  background: linear-gradient(rgba(253, 220, 99, .7), rgba(	242, 102, 40, .7));
   margin: 10px;
   border-radius: 20px;
 }
