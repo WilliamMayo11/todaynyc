@@ -20,7 +20,7 @@ class WeatherContainer extends Component {
   componentDidMount() {
     const weather = new Weather()
     let todayWeather = weather.getCurrentWeather();
-    let weatherForecast = weather.getWeatherForecast();
+    // let weatherForecast = weather.getWeatherForecast();
     todayWeather
       .then(r => r.json())
       .then(data => {
@@ -36,14 +36,14 @@ class WeatherContainer extends Component {
       })
       .catch(err => console.log(err))
 
-    weatherForecast
-      .then(r => r.json())
-      .then(data => {
-        console.log('forecast data: ', data)
-        let time = new Date(data.list[0].dt * 1000)
-        console.log('time: ', time)
-      })
-      .catch(err => console.log(err))
+    // weatherForecast
+    //   .then(r => r.json())
+    //   .then(data => {
+    //     console.log('forecast data: ', data)
+    //     let time = new Date(data.list[0].dt * 1000)
+    //     console.log('time: ', time)
+    //   })
+    //   .catch(err => console.log(err))
   }
 
   render() {

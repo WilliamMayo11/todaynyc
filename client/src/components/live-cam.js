@@ -15,7 +15,7 @@ class LiveCam extends Component {
         <div>
           <div className="intrinsic-container intrinsic-container-16x9">
             <iframe
-              src="https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1"
+              src="https://www.youtube.com/embed/la90mA4VLa4?rel=0&amp;controls=0&amp;showinfo=0&playsinline=1&autoplay=1"
               frameBorder="0"
               allow="autoplay; encrypted-media"
               modestbranding="0"
