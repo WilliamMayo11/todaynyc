@@ -16,7 +16,7 @@ class HoroscopeContainer extends Component {
     todayHoroscope
       .then(r => r.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         this.setState({
           horoscope: data.horoscope
         })

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './clock.png';
 import WeatherContainer from './containers/weather-container.js';
 // import Horoscope from './components/horoscope-container.js'
-import TwitterContainer from './containers/twitter-container.js'
-import LiveCam from './components/live-cam.js'
+import TwitterContainer from './containers/twitter-container.js';
+import LiveCam from './components/live-cam.js';
 import './App.css';
 
 class App extends Component {

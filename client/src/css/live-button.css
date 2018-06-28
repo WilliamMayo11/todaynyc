@@ -1,0 +1,37 @@
+.button {
+  height: 60px;
+  width: 400px;
+  border: .5px solid white;
+  border-radius: 20px;
+  background-color: #428bca;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.message {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: 1px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+
+@media only screen and (max-width: 480px) {
+    .button {
+      width: 200px;
+    }
+    .message {
+      font-size: 14px;
+    }
+}

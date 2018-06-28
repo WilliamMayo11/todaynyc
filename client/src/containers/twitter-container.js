@@ -17,7 +17,7 @@ class TwitterContainer extends Component {
     todayTwitter
       .then(r => r.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         this.setState({
           tweets: (data)
         })
